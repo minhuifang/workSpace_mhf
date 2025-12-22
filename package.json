@@ -1,0 +1,17 @@
+{
+  "name": "fe-interview-handwrite",
+  "version": "1.0.0",
+  "description": "前端面试手写题集合",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-all.js",
+    "test:single": "node"
+  },
+  "keywords": [
+    "interview",
+    "javascript",
+    "handwrite"
+  ],
+  "author": "",
+  "license": "ISC"
+}
