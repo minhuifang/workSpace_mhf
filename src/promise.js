@@ -67,9 +67,7 @@ const MyPromise = function(executor) {
    * 💡 注意：使用箭头函数确保 this 指向 Promise 实例
    */
   const resolve = (value) => {
-    // ⚠️ 简化版问题：没有判断当前状态，应该只在 PENDING 时才能转换
-    // 完整版应该加上：if (this.state !== PENDING) return;
-    
+    if (this.state !== PENDING) return
     this.state = FULFILLED;
     this.value = value;
   };
@@ -82,9 +80,7 @@ const MyPromise = function(executor) {
    * 💡 注意：使用箭头函数确保 this 指向 Promise 实例
    */
   const reject = (error) => {
-    // ⚠️ 简化版问题：没有判断当前状态，应该只在 PENDING 时才能转换
-    // 完整版应该加上：if (this.state !== PENDING) return;
-    
+    if (this.state !== PENDING) return;
     this.state = REJECTED;
     this.value = error;
   };
