@@ -1,96 +1,207 @@
-# 前端面试手写题
+# 前端面试知识库
 
-整理前端面试常见的手写题，面试出现概率极高，建议每个都过自己过一遍。
+> 按照问题类型分类整理的前端面试知识点，便于学习和查看
 
-你也可以提交 PR，提供你面试遇到的题目。
+## 📚 目录结构
 
-代码汇总请参照 [SUMMARY.md](./SUMMARY.md) 。
+本知识库将原有的大文件按照问题类型拆分为以下 8 个独立文件：
 
-**高频**：★★★ </br>
-**中频**：★★ </br>
-**低频**：★ </br>
+### 1. [CSS 相关](./01-CSS相关.md)
+- 样式隔离方案（CSS Modules、CSS-in-JS、Scoped CSS、BEM、Shadow DOM）
+- Service Worker 的作用
+- 浏览器缓存机制（强缓存、协商缓存）
 
-## JavaScript 原理
+### 2. [ES6 语法](./02-ES6语法.md)
+- ES6 热门语法特性
+- let/const、箭头函数、模板字符串
+- 解构赋值、扩展运算符
+- Promise/async/await
+- 模块化、Set/Map、可选链
 
-- [实现 bind()](./src/bind.js) ★★
-- [实现 apply()](./src/apply.js) ★★
-- [实现 call()](./src/call.js) ★★
-- [实现 instanceof](./src/instanceof.js) ★
-- [实现 new](./src/new.js) ★
-- [实现 jsonp](./src/jsonp.js) ★★★
-- [实现 Promise](./src/promise.js) ★★★
-- [实现 Promise.all()](./src/promiseAll.js) ★★★
-- [实现 Promise.race()](./src/promiseRace.js) ★
-- [实现 Proxy](./src/proxy.js) ★★
-- [实现 EventEmitter 订阅监听模式](./src/subscribe.js) ★★
-- [setTimout 实现 setInterval](./src/interval.js) ★
-- [深拷贝](./src/deepclone.js)  ★★★
+### 3. [JavaScript 基础](./03-JavaScript基础.md)
+- 事件循环机制（Event Loop）
+- 数组方法详解（改变/不改变原数组）
+- 数组操作性能对比（map、forEach、for）
+- 闭包应用场景
+- 原型链机制
 
+### 4. [React 相关](./04-React相关.md)
+- React Hooks 详解（useState、useEffect、useRef）
+- 组件生命周期管理
+- 性能优化技巧（useCallback、useMemo、React.memo）
 
-### 函数
+### 5. [Git 使用](./05-Git使用.md)
+- 提交管理（reset、revert、amend）
+- 冲突解决
+- 常用 Git 命令
+- 分支管理策略
 
-- [函数防抖](./src/debounce.js) ★★★
-- [函数节流](./src/throttle.js) ★★★
-- [函数柯里化（实现 `sum(1,2)(3)()`）](./src/curry.js) ★★★
-- [compose 函数](./src/compose.js) ★★
-- [before 函数](./src/before.js) ★
+### 6. [Webpack 工程化](./06-Webpack工程化.md)
+- 性能优化策略
+- Loader 配置
+- 构建速度优化
+- 打包体积优化
 
+### 7. [性能优化](./07-性能优化.md)
+- CSS vs JS 动画
+- 回流与重绘优化
+- 性能优化最佳实践
 
-## 数组
+### 8. [面试技巧](./08-面试技巧.md)
+- 面试回答技巧
+- 记忆技巧
+- 知识点总结
+- 面试准备清单
 
-- [数组拍平](./src/flatten.js) ★★★
-- [数组去重](./src/unique.js) ★★★
-- [数组转对象](./src/array2Object.js) ★
+---
 
-## 字符串
+## 🎯 使用指南
 
-- [去除字符串首尾空格](./src/trim.js) ★
-- [下划线驼峰互转](./src/camel.js) ★
+### 学习路径建议
 
-## 数学
+**基础阶段：**
+1. JavaScript 基础 → ES6 语法
+2. CSS 相关 → 性能优化
 
-- [计算圆周率](./src/pi.js) ★
+**进阶阶段：**
+3. React 相关 → Webpack 工程化
+4. Git 使用 → 面试技巧
 
-## 算法
+### 快速查找
 
-算法需要掌握基本的数据结构，例如栈、队列、链表、树、排序算法等等，建议去 [LeetCode](https://leetcode-cn.com/) 上刷题。不过不要为了刷题而刷题，最重要的是归纳与总结，**刷十道不如一道刷十遍。**
+根据面试问题类型，快速定位到对应文件：
 
-- [归并排序](./src/mergeSort.js) ★★
-- [插入排序](./src/insertionSort.js) ★
-- [快速排序](./src/quickSort.js) ★★★
-- [选择排序](./src/selectionSort.js) ★
-- [希尔排序](./src/shellSort.js) ★
-- [堆排序](./src/heapSort.js) ★
-- [二分查找](./src/binarySearch.js) ★
-- [最长递增子序列](./src/lis.js) ★★★
-- [最长公共子串](./src/longestCommonPrefix.js) ★★
-- [城市数据找父节点](./src/city.js) ★
-- [查找缺失的数](./src/missingNumber.js) ★
+- **问到 CSS 样式隔离？** → 查看 [01-CSS相关.md](./01-CSS相关.md)
+- **问到 ES6 新特性？** → 查看 [02-ES6语法.md](./02-ES6语法.md)
+- **问到闭包、原型链？** → 查看 [03-JavaScript基础.md](./03-JavaScript基础.md)
+- **问到 React Hooks？** → 查看 [04-React相关.md](./04-React相关.md)
+- **问到 Git 操作？** → 查看 [05-Git使用.md](./05-Git使用.md)
+- **问到 Webpack 优化？** → 查看 [06-Webpack工程化.md](./06-Webpack工程化.md)
+- **问到性能优化？** → 查看 [07-性能优化.md](./07-性能优化.md)
+- **需要面试技巧？** → 查看 [08-面试技巧.md](./08-面试技巧.md)
 
+---
 
-分享一下自己整理的 LeetCode 上必刷的题，比较具有代表性。
+## 📊 知识点统计
 
-- [ ] LeetCode 001 Two Sum
-- [ ] LeetCode 015 3Sum(可能会问 LeetCode18.4Sum思路)
-- [ ] LeetCode 020 Valid Parentheses
-- [ ] LeetCode 021 Merge Two Sorted Lists
-- [ ] LeetCode 025 Reverse Nodes in k-group
-- [ ] LeetCode 053 Maximum Subarra
-- [ ] LeetCode 066 Plus One(等介于:高精度加加法)
-- [ ] LeetCode 098 Validate Binary Search Tree
-- [ ] LeetCode 110 Balanced Binary Tree
-- [ ] LeetCode 134 Gas Station
-- [ ] LeetCode 136 Single Number
-- [ ] LeetCode 137 Single Number II
-- [ ] LeetCode 146 LRU Cache(变形题:带有过期时间的LRU缓存)（Map + 链表）
-- [ ] LeetCode 206 Reverse Linked List（递归、迭代）
-- [ ] LeetCode 215 Kth Largest Element in an Array(等价于:快速排序)
-- [ ] LeetCode 232 Implement Queue using Stacks(每次将新来的元素放到栈底，stack.push())
-- [ ] LeetCode 328 Odd Even Linked List
-- [ ] LeetCode 415 Add Strings(等价于:大数加法)
-- [ ] LeetCode 470 rand70rand100
-- [ ] LeetCode 496 Next Greater Element I(时间复杂度O(n)(单调栈，使用 Map 映射 stack 的指定位置)
-- [ ] LeetCode 716 Max Stack(两个栈实现最大栈,要求pop,push, get max都为0(1)
-- [ ] LeetCode 860 Lemonade Change
+### CSS 相关
+- 5 种样式隔离方案
+- 2 种缓存机制
+- Service Worker 应用
 
+### JavaScript
+- 10+ ES6 特性
+- 30+ 数组方法
+- 事件循环机制
+- 闭包 7 大应用场景
+- 原型链继承
+
+### React
+- 8 个常用 Hooks
+- 3 种性能优化方法
+- 组件生命周期管理
+
+### 工程化
+- Webpack 10+ 优化技巧
+- Git 常用命令
+- 分支管理策略
+
+### 性能优化
+- 动画性能对比
+- 回流与重绘
+- 10+ 优化策略
+
+---
+
+## 🔥 高频考点
+
+### JavaScript 基础
+1. ⭐⭐⭐ 事件循环机制
+2. ⭐⭐⭐ 闭包的应用
+3. ⭐⭐⭐ 原型链继承
+4. ⭐⭐ 数组方法区别
+5. ⭐⭐ Promise/async/await
+
+### React
+1. ⭐⭐⭐ Hooks 使用
+2. ⭐⭐⭐ 性能优化
+3. ⭐⭐ 生命周期
+4. ⭐⭐ useState vs useRef
+5. ⭐⭐ useMemo vs React.memo
+
+### 性能优化
+1. ⭐⭐⭐ 回流与重绘
+2. ⭐⭐⭐ CSS vs JS 动画
+3. ⭐⭐ 浏览器缓存
+4. ⭐⭐ Webpack 优化
+5. ⭐ 虚拟滚动
+
+---
+
+## 💡 学习建议
+
+### 理解优先
+- 不要死记硬背，理解核心原理
+- 多问"为什么"，而不是"是什么"
+- 通过实践加深理解
+
+### 系统学习
+- 按照目录结构系统学习
+- 每个知识点都要掌握原理和应用
+- 定期复习，巩固记忆
+
+### 实战演练
+- 结合实际项目经验
+- 自己动手实现示例代码
+- 总结项目中的技术难点
+
+### 面试准备
+- 准备 2-3 个项目案例
+- 练习清晰表达技术问题
+- 模拟面试场景
+
+---
+
+## 📝 更新日志
+
+### 2026-01-04
+- ✅ 将原有大文件拆分为 8 个独立文件
+- ✅ 按照问题类型分类整理
+- ✅ 添加详细的目录索引
+- ✅ 优化内容结构和排版
+- ✅ 添加学习建议和面试技巧
+
+---
+
+## 🤝 贡献指南
+
+如果你发现任何错误或有更好的建议，欢迎：
+1. 提出 Issue
+2. 提交 Pull Request
+3. 分享你的学习心得
+
+---
+
+## 📌 注意事项
+
+1. **持续更新**：前端技术日新月异，建议定期更新知识
+2. **实践为主**：理论结合实践，才能真正掌握
+3. **举一反三**：学会从一个知识点延伸到相关知识
+4. **保持谦虚**：技术无止境，保持学习的态度
+
+---
+
+## 📞 联系方式
+
+如有问题或建议，欢迎交流！
+
+---
+
+## 📄 License
+
+本知识库仅供学习参考使用。
+
+---
+
+**祝你面试顺利！加油！** 💪
 
